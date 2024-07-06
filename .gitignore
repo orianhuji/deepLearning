@@ -1,3 +1,6 @@
 venv/
 .idea/EX2/.venv/
 EX2/data/
+.vectorcache/
+EX3/__pycache__/
+EX3/.vectorcache/
