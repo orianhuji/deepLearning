@@ -104,7 +104,7 @@ class ExMLP(nn.Module):
     def __init__(self, input_size, output_size, hidden_size):
         super(ExMLP, self).__init__()
 
-        self.ReLU = torch.nn.Sigmoid()
+        self.sigmoid = torch.nn.Sigmoid()
 
         # Token-wise MLP network weights
         self.layer1 = MatMul(input_size,hidden_size)
@@ -121,11 +121,11 @@ class ExMLP(nn.Module):
         # Token-wise MLP network implementation
         
         x = self.layer1(x)
-        x = self.ReLU(x)
+        x = self.sigmoid(x)
         x = self.layer2(x)
-        x = self.ReLU(x)
+        x = self.sigmoid(x)
         x = self.layer3(x)
-        x = self.ReLU(x)
+        x = self.sigmoid(x)
         # rest
 
         return x

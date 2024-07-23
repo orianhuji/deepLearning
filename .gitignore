@@ -4,3 +4,6 @@ EX2/data/
 .vector_cache/
 EX3/__pycache__/
 EX3/.vector_cache/
+EX4/ckpts/
+EX4/data/
+EX4/myenv/
